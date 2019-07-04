@@ -1,0 +1,6 @@
+C:\Users\Leo\RiderProjects\AppKiller\AppKiller\bin\Release\AppKiller.exe
+C:\Users\Leo\RiderProjects\AppKiller\AppKiller\bin\Release\AppKiller.pdb
+C:\Users\Leo\RiderProjects\AppKiller\AppKiller\obj\Release\AppKiller.csprojAssemblyReference.cache
+C:\Users\Leo\RiderProjects\AppKiller\AppKiller\obj\Release\AppKiller.csproj.CoreCompileInputs.cache
+C:\Users\Leo\RiderProjects\AppKiller\AppKiller\obj\Release\AppKiller.exe
+C:\Users\Leo\RiderProjects\AppKiller\AppKiller\obj\Release\AppKiller.pdb
