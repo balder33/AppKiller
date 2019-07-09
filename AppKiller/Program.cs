@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+1. Написать на C# утилиту, которая мониторит процессы Windows и "убивает" те процессы, которые работают слишком долго.
+- На входе три параметра: название процесса, допустимое время жизни (в минутах) и частота проверки (в минутах).
+- Утилита запускается из командной строки. При старте она считывает три входных параметра и начинает мониторить 
+процессы с указанной частотой. Если процесс живет слишком долго – завершает его и выдает сообщение в лог.
+Пример запуска:
+monitor.exe notepad 5 1
+С такими параметрами утилита раз в минуту проверяет, не живет ли процесс notepad больше пяти минут, и 
+"убивает" его, если живет.
+*/
+
+
+using System;
 using System.Diagnostics;
 using System.Threading;
 
@@ -63,7 +75,8 @@ namespace AppKiller
             foreach (Process prc in processes)
             {
                 TimeSpan timeLifeFact = DateTime.Now - prc.StartTime; // время жизни процесса
-                TimeSpan timeFrequency = ((prc.StartTime.AddMinutes(Dto.Lifetime)) - prc.StartTime); // частота проверки в TimeSpan
+                TimeSpan timeFrequency = ((prc.StartTime.AddMinutes(Dto.Lifetime)) - prc.StartTime); // частота проверки
+                                                                                                     // в TimeSpan
                 if (timeLifeFact >= timeFrequency)
                 {
                     Console.WriteLine("Завершен процесс: {0} , Время жизни: {1} ", 
